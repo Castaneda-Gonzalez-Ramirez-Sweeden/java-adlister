@@ -1,5 +1,5 @@
 /* Fonts Form Google Font ::- https://fonts.google.com/  -:: */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap');
 
 /*CSS rule to specify families:*/
 /*font-family: 'Nunito', sans-serif;*/
@@ -7,32 +7,38 @@
 /* End Fonts */
 /* Start Global rules */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
     font-weight: bold;
-    color: whitesmoke;
 }
 
 body {
-    background-color: #355c7d;
+    background-color: #a1a1a1;
 }
 
+/*largest div overlaid on top of background {*/
+/*    background-color: #232246;*/
+/*}*/
+
 .form-group {
-width: 250px;
-height: 50px;
-margin-top: 2%;
-padding: 15px;
-font-size: 16px;
-font-family: 'Abel', sans-serif;
-/*color: #6c5b7b;*/
-outline: none;
-border: none;
+    width: 250px;
+    height: 50px;
+    margin-top: 2%;
+    padding: 15px;
+    /*font-size: 16px;*/
+    color: #f7f9fb;
+    outline: none;
+    border: none;
 }
 
 .button {
-    color: #6c5b7b;
+    color: #d65644;
     width: 250px;
     height: 50px;
+}
+
+.navbar {
+    background-color: #f7f9fb;
 }
