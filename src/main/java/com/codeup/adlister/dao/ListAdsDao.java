@@ -27,6 +27,7 @@ public class ListAdsDao implements Ads {
         return ad.getId();
     }
 
+
     @Override
     public List<Ad> searchAds(String searchString) throws SQLException {
         return null;
@@ -35,6 +36,11 @@ public class ListAdsDao implements Ads {
     @Override
     public void deleteAd(Ad ad) {
 
+    }
+
+    @Override
+    public Ad getAdById(int id) {
+        return null;
     }
 
     private List<Ad> generateAds() {
