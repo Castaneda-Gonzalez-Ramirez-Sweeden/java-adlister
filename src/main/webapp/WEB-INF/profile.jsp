@@ -12,5 +12,18 @@
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
 
+    <div class="container">
+        <div class = "row">
+        <card class="col-4">
+            <img alt="user Image" class="rounded mx-auto d-block">
+            <h4>${sessionScope.user.username}</h4>
+            <p>Messages</p>
+            <p>Account Manager</p>
+        </card>
+        </div>
+    </div>
+
+
+
 </body>
 </html>
