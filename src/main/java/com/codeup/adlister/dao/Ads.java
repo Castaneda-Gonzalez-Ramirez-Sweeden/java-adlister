@@ -12,4 +12,6 @@ public interface Ads {
     Long insert(Ad ad);
 
     List<Ad> searchAds (String searchString) throws SQLException;
+
+    void deleteAd(Ad ad);
 }
