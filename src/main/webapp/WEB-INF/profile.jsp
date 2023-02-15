@@ -19,6 +19,9 @@
             <h4>${sessionScope.user.username}</h4>
             <p>Messages</p>
             <p>Account Manager</p>
+            <form action="/users/delete" method="post">
+                <button type="submit" value="${sessionScope.user.username}" name="deleteMe">Delete User</button>
+            </form>
         </card>
         </div>
     </div>

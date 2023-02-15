@@ -51,6 +51,18 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public void deleteUserByUsername( String username){
+        try{
+            String deleteQuery = "DELETE FROM users WHERE username = ?";
+            PreparedStatement stmt = connection.prepareStatement(deleteQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, username);
+            stmt.executeUpdate();
+        }catch(SQLException e){
+            throw new RuntimeException("error deleting user. Please check code.",e);
+        }
+    }
+
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
