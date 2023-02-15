@@ -18,9 +18,10 @@ public class DeleteUserServlet  extends HttpServlet {
             resp.sendRedirect("/login");
             return;
         }
+//      Using similar logic to the delete ad servlet we are retrieving from the JSP parameter "deleteMe"
         String username = req.getParameter("deleteMe");
-        System.out.println(username);
         DaoFactory.getUsersDao().deleteUserByUsername(username);
+//      Here we use .invalidate to essentially wipe clean the session. This was added due to persistence of the profile page after delete query was instanced.
         req.getSession().invalidate();
         resp.sendRedirect("/login");
     }
