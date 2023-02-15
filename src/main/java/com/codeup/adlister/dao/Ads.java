@@ -20,8 +20,8 @@ public interface Ads {
     List<Ad> searchAds (String searchString) throws SQLException;
 
 
-    void deleteAd(Ad ad);
 
-    Ad getAdById(int id);
+
+
 
 }
