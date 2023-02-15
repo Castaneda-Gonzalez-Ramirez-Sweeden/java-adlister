@@ -13,7 +13,7 @@ h3 {
 }
 
 body {
-    background-color: #a1a1a1;
+
 }
 
 /*largest div overlaid on top of background {*/
@@ -26,7 +26,7 @@ body {
     margin-top: 2px;
     padding: 5px;
     font-size: 16px;
-    color: #f7f9fb;
+
     /*outline: none;*/
     /*border: none;*/
 }
@@ -39,10 +39,10 @@ label {
     background: #21130d;
     width: 250px !important;
     height: 50px;
-    color: #f7f9fb;
+
     font-size: 16px;
 }
 
 .navbar {
-    background-color: #f7f9fb;
+
 }

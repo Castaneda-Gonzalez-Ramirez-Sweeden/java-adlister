@@ -21,11 +21,11 @@ public class MessagesServlet extends HttpServlet {
         User user = DaoFactory.getUsersDao().findByUsername(username);
 
         if (user == null) {
-            response.sendRedirect("/messages");
+            response.sendRedirect("/login");
             return;
         }
 
-        request.getRequestDispatcher("/WEB-INF/messages.jsp").forward(request, response);
+//        request.getRequestDispatcher("/WEB-INF/messages.jsp").forward(request, response);
 
         boolean validAttempt = Password.check(password, user.getPassword());
 
@@ -33,7 +33,7 @@ public class MessagesServlet extends HttpServlet {
             request.getSession().setAttribute("user", user);
             response.sendRedirect("/profile");
         } else {
-            response.sendRedirect("/messages");
+            response.sendRedirect("/login");
         }
     }
 }
