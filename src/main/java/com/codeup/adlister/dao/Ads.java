@@ -12,14 +12,12 @@ public interface Ads {
     Long insert(Ad ad);
 
     // used to delete an ad.
-    void deleteAd(Ad ad);
+    void deleteAdById(int id);
 
     Ad getAdById (int id);
 
 
     List<Ad> searchAds (String searchString) throws SQLException;
-
-
 
 
 

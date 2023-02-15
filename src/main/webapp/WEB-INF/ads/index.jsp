@@ -17,6 +17,9 @@
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
             <a href="${pageContext.request.contextPath}/ads/single">View Single Ad</a>
+            <form action="/ads/delete" method="post">
+                <Button type="submit" value="${ad.id}" name="deleteMe"> Delete</Button>
+            </form>
         </div>
     </c:forEach>
 </div>
