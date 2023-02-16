@@ -10,7 +10,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Here Are all the ads!</h1>
+    <h1>Complete Ad List</h1>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
@@ -20,7 +20,7 @@
             <form action="/ads/delete" method="post">
                 <Button type="submit" value="${ad.id}" name="deleteMe"> Delete</Button>
             </form>
-            <form action="/edit-ad" method="post">
+            <form action="/edit-ad" method="get">
                 <Button type="submit" value="${ad.id}" name="editMe">Edit</Button>
             </form>
         </div>

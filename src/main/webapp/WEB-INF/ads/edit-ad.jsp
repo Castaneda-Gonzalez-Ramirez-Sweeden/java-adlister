@@ -30,7 +30,7 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control" type="text"></textarea>
         </div>
-        <Button type="submit" value="${ad.id}" name="editMe">Edit</Button>
+            <Button type="submit" value="${ad.id}" name="adID"> More Details</Button>
     </form>
 </div>
 
