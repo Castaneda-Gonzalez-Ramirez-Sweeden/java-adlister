@@ -20,6 +20,9 @@
             <form action="/ads/delete" method="post">
                 <Button type="submit" value="${ad.id}" name="deleteMe"> Delete</Button>
             </form>
+            <form action="/edit-ad" method="post">
+                <Button type="submit" value="${ad.id}" name="editMe">Edit</Button>
+            </form>
         </div>
     </c:forEach>
 </div>

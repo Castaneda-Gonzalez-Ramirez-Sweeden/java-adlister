@@ -6,16 +6,17 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Please Log In" />
+        <jsp:param name="title" value="Please Log In"/>
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="alert alert-primary" role="alert">
     The password you entered does not match what we have on file* Please return to the login page.
 </div>
@@ -24,10 +25,13 @@
 </symbol>
 </svg>
 <div class="alert alert-warning d-flex align-items-center" role="alert">
-    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:No title has been assigned to this ad"><use xlink:href="#exclamation-triangle-fill"/></svg>
-    </div>
-        <div>
-        Warning:No title has been assigned to this ad
-    </div>
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+         aria-label="Warning:No title has been assigned to this ad">
+        <use xlink:href="#exclamation-triangle-fill"/>
+    </svg>
+</div>
+<div>
+    Warning:No title has been assigned to this ad
+</div>
 </body>
 </html>

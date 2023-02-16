@@ -19,5 +19,4 @@ public class IndividualAdServlet extends HttpServlet {
 
         request.getRequestDispatcher("WEB-INF/ads/single.jsp").forward(request, response);
     }
-
 }
