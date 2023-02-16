@@ -16,10 +16,8 @@ public interface Ads {
 
     Ad getAdById (int id);
 
-
     List<Ad> searchAds (String searchString) throws SQLException;
 
-
-
+    void updateAd(Ad ad);
 
 }

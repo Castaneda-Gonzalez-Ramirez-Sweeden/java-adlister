@@ -15,7 +15,6 @@ import java.sql.SQLException;
 public class IndividualAdServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         int adId = Integer.parseInt(request.getParameter("adID"));
         System.out.println(adId);
         Ad ad = DaoFactory.getAdsDao().getAdById(adId);
@@ -24,7 +23,5 @@ public class IndividualAdServlet extends HttpServlet {
         request.setAttribute("Ad", ad);
         request.getRequestDispatcher("/WEB-INF/ads/single.jsp").forward(request,response);
 
-
     }
-
 }

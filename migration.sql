@@ -3,7 +3,7 @@ USE adlister_db;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS ads;
-DROP TABLE IF EXISTS ad_category;
+# DROP TABLE IF EXISTS ad_category;
 
 CREATE TABLE users
 (
@@ -29,6 +29,7 @@ CREATE TABLE categories
     description TEXT         NOT NULL,
     PRIMARY KEY (id)
 );
+
 CREATE TABLE ad_category
 (
     ad_id  INT UNSIGNED NOT NULL,
@@ -36,6 +37,7 @@ CREATE TABLE ad_category
     FOREIGN KEY (ad_id) REFERENCES ads (id) ,
     FOREIGN KEY (cat_id) REFERENCES categories (id)
 );
+
 
 
 
