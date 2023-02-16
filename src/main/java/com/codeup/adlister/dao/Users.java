@@ -9,4 +9,6 @@ public interface Users {
     Long insert(User user);
 
     void deleteUserByUsername( String username);
+
+    void updateUser(User user);
 }
