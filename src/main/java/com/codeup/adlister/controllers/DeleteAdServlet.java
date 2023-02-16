@@ -14,10 +14,12 @@ import java.io.IOException;
 public class DeleteAdServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        Checking to verify user is logged in via presence of a user. If not redirected to /login
         if (req.getSession().getAttribute("user") == null) {
             resp.sendRedirect("/login");
             return;
         }
+//      Using the parameter "deleteMe" from the form on hte jsp it is able to delete the ad by id.
         int id = Integer.parseInt(req.getParameter("deleteMe"));
         DaoFactory.getAdsDao().deleteAdById(id);
         resp.sendRedirect("/ads");
