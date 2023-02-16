@@ -18,7 +18,9 @@
             <img alt="user Image" class="rounded mx-auto d-block">
             <h4>${sessionScope.user.username}</h4>
             <p>Messages</p>
-            <p>Account Manager</p>
+            <form action="/users/edit" method="get">
+                <button type="submit" value="${sessionScope.user.id}" name="editMe">Edit User</button>
+            </form>
             <form action="/users/delete" method="post">
                 <button type="submit" value="${sessionScope.user.username}" name="deleteMe">Delete User</button>
             </form>

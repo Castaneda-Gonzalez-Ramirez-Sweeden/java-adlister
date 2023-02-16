@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet (name = "controllers.SearchServlet", urlPatterns = "/ad/search")
+@WebServlet (name = "controllers.SearchServlet", urlPatterns = "/ads/search")
 public class SearchServlet extends HttpServlet {
 
     @Override
@@ -19,7 +19,6 @@ public class SearchServlet extends HttpServlet {
         String searchString = request.getParameter("s");
         try {
             List<Ad> adList = DaoFactory.getAdsDao().searchAds(searchString);
-            System.out.println(adList);
             request.setAttribute("ads", adList);
         } catch (SQLException e) {
             e.printStackTrace();

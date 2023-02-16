@@ -54,7 +54,7 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
-    public void deleteUserByUsername( String username){
+    public void deleteUserByUsername(String username){
         try{
             String deleteQuery = "DELETE FROM users WHERE username = ?";
             PreparedStatement stmt = connection.prepareStatement(deleteQuery, Statement.RETURN_GENERATED_KEYS);
@@ -75,6 +75,19 @@ public class MySQLUsersDao implements Users {
             rs.getString("email"),
             rs.getString("password")
         );
+    }
+
+    public void updateUser(User user){
+        try{
+            String updateQuery = "UPDATE users SET username = ?, email = ? WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(updateQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, user.getUsername());
+            stmt.setString(2,user.getEmail());
+            stmt.setInt(3, (int) user.getId());
+            stmt.executeUpdate();
+        }catch(SQLException e){
+            throw new RuntimeException("Error Updating user");
+        }
     }
 
 }

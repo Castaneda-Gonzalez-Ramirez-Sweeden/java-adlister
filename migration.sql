@@ -29,15 +29,14 @@ CREATE TABLE categories
     description TEXT         NOT NULL,
     PRIMARY KEY (id)
 );
-# CREATE TABLE ad_category
-# (
-#     ad_id  INTEGER UNSIGNED NOT NULL,
-#     cat_id INTEGER UNSIGNED NOT Null,
-#     FOREIGN KEY (ad_id) REFERENCES ads (id)
-#         ON DELETE CASCADE ,
-#     FOREIGN KEY (cat_id) REFERENCES categories (id)
-#         ON DELETE CASCADE
-# );
+
+CREATE TABLE ad_category
+(
+    ad_id  INT UNSIGNED NOT NULL,
+    cat_id INT UNSIGNED NOT NULL,
+    FOREIGN KEY (ad_id) REFERENCES ads (id) ,
+    FOREIGN KEY (cat_id) REFERENCES categories (id)
+);
 
 
 
