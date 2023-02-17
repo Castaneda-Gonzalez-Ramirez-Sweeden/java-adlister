@@ -3,8 +3,33 @@
 Follow the instructions and suggestions in [here](https://java.codeup.com/java-iii/finish-the-adlister)
 
 ## Description
-Our application gives users the ability to create a user profile with a unique username and password. With this profile, the users have the ability to utilize create, read, update and delete (CRUD) ads. These task will be accomplished with the use of MYSQL, JAVA, HTML, JSTL, JSP and styling with CSS.
+Our application gives users the ability to create a user profile with a unique username and password. With this profile, the users have the ability to utilize create, read, update and delete (CRUD) ads. These task will be accomplished with the use of MYSQL database, JAVA 11, HTML, JSTL, JSP and styling with CSS and Bootstrap 5.
 
+-  **Create ads**: Users can create new ads by filling out a form with the necessary information such as title, description, price, and image if available.
+
+
+-  **Browse ads**: Users can browse through all the existing ads on the website, viewing each ad's title description, price, and image if available.
+
+
+
+- **Edit ads**: Users can edit the details of their own ads by selecting the ad they wish to update and making changes to the relevant fields in the edit form.
+
+
+- **Delete ads**: Users can delete their own ads by selecting the ad they wish to delete and confirming their intent to remove it.
+
+
+
+
+## Features
+
+- **User authentication**: Only registered users can create, edit, and delete ads. Visitors can browse the ads without logging in.
+
+
+-  **Form validation**: The application validates user input to ensure that required fields are not empty, prices are numbers, and image files are of valid types.
+
+
+
+- **Search functionality**: Users can search for ads by keyword, category, or price range to filter the ads they can see.
 ## Getting Started
 Before utilizing the program you'll need to configure intellij to run this project.
 
