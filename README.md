@@ -61,7 +61,7 @@ Navigate to the Tomcat at the top of intellij. Select the "play button" to conne
 -  Running the above code will stop the additional server from trying to run. Once this is complete, restart the server by clicking the "play button" next to Tomcat at the top of the page.
 
 
-**Repositiory Issues:**
+**Repository Issues:**
 
 -  Let's ensure the user is on the correct repository: git remote -v
 - if user is on the wrong repository the following commands will remove it:
