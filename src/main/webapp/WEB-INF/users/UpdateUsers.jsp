@@ -18,10 +18,10 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Please fill in your new information.</h1>
+    <h1>Please fill in your new information</h1>
     <form action="/users/edit" method="post">
         <div class="form-group">
-            <label for="username">Updated Username</label>
+            <label for="username">Update Username</label>
             <input id="username" name="username" class="form-control" type="text">
         </div>
         <div class="form-group">

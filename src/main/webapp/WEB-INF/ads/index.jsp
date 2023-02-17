@@ -13,16 +13,16 @@
     <h1>Complete Ad List</h1>
 
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
+        <div class="card col-md-12">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-            <form action="/ads/single" method="get">
-                <Button type="submit" value="${ad.id}" name="adID"> More Details</Button>
+            <form action="/ads/single" class="form-ad" method="get">
+                <Button type="submit" value="${ad.id}" name="adID">More Details</Button>
             </form>
-            <form action="/ads/delete" method="post">
-                <Button type="submit" value="${ad.id}" name="deleteMe"> Delete</Button>
+            <form action="/ads/delete" class="form-ad" method="post">
+                <Button type="submit" value="${ad.id}" name="deleteMe">Delete</Button>
             </form>
-            <form action="/edit-ad" method="get">
+            <form action="/edit-ad" class="form-ad" method="get">
                 <Button type="submit" value="${ad.id}" name="editMe">Edit</Button>
             </form>
         </div>
