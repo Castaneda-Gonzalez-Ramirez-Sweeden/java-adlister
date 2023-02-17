@@ -27,6 +27,7 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control" type="text" placeholder="${ad.description}"></textarea>
         </div>
+
             <Button type="submit" value="${editMe}" name="editMe"> finalized edit</Button>
     </form>
 </div>

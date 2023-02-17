@@ -11,7 +11,7 @@
 
 
     <div class="container">
-        <h1>Please fill in your information.</h1>
+        <h1>Fill in your information to register:</h1>
         <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -29,7 +29,7 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password">
             </div>
-            <input type="submit" class="btn btn-primary btn-block">
+            <button type="submit" value="submit">Submit</button>
         </form>
     </div>
 </body>

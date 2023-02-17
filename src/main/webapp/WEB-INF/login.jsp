@@ -10,7 +10,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container" >
-    <h3>Please Log In</h3>
+    <h1>Please log into the site:</h1>
     <form action="/login" method="POST">
         <div class="form-group">
             <label for="username">Username</label>
@@ -20,7 +20,7 @@
             <label for="password">Password</label>
             <input id="password" name="password" class="form-control" type="password">
         </div>
-        <input type="submit" class="btn btn-outline-dark" value="Log In">
+        <button type="submit" value="Log In">Log In</button>
     </form>
 </div>
 </body>
