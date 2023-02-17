@@ -3,6 +3,7 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,8 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
-@WebServlet(name = "EditAdServlet", urlPatterns = "/edit-ad")
+@WebServlet(name = "EditAdServlet", urlPatterns = "/edit-ad/*")
 public class EditAdServlet extends HttpServlet {
 
     @Override
@@ -20,18 +22,21 @@ public class EditAdServlet extends HttpServlet {
             response.sendRedirect("/error");
             return;
         }
+        int adId = Integer.parseInt(request.getParameter("editMe"));
+        request.setAttribute("editMe", adId);
+        request.setAttribute("ad", DaoFactory.getAdsDao().getAdById(adId));
         request.getRequestDispatcher("/WEB-INF/ads/edit-ad.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        int AdId = Integer.parseInt(request.getParameter("editMe"));
+        User user = (User) request.getSession().getAttribute("user");
+        int adId = Integer.parseInt(request.getParameter("editMe"));
         String title = request.getParameter("title");
         String description = request.getParameter("description");
-        Ad newAd = new Ad(AdId, title, description);
-        System.out.printf("turtle %s", newAd.getTitle());
-//        DaoFactory.getAdsDao().updateAd(ad);
-        response.sendRedirect("/ads/single");
+        Ad newAd = new Ad(adId,user.getId(), title, description);
+        DaoFactory.getAdsDao().updateAd(newAd);
+        response.sendRedirect("/ads");
 }
 }
 

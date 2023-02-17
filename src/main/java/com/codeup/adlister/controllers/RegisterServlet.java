@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
+import com.mysql.cj.Session;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,13 @@ public class RegisterServlet extends HttpServlet {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        String passwordConfirmation = request.getParameter("confirm_password");
 
+
+        boolean inputHasErrors = username.isEmpty()
+                || email.isEmpty()
+                || password.isEmpty()
+                || (! password.equals(passwordConfirmation));
 
         if (request.getSession().getAttribute("user") != null) {
             response.sendRedirect("/profile");
@@ -34,11 +41,14 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("/register");
             return;
         }
-
+        if(inputHasErrors){
+            response.sendRedirect("/register");
+        }
 
         // create and save a new user
         User user = new User(username, email, password);
         DaoFactory.getUsersDao().insert(user);
+        request.getSession().setAttribute("user", user);
         response.sendRedirect("/profile");
 
     }
@@ -46,9 +56,4 @@ public class RegisterServlet extends HttpServlet {
 
 
 
-//        // create and save a new user
-//        User user = new User(username, email, password);
-//        DaoFactory.getUsersDao().insert(user);
-//        response.sendRedirect("/login");
-//    }
 
