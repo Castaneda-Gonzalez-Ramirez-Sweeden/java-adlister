@@ -18,6 +18,8 @@ public interface Ads {
 
     List<Ad> searchAds (String searchString) throws SQLException;
 
+    Ad searchAdsByTitle(String searchString) throws SQLException;
+
     void updateAd(Ad ad);
 
 }
