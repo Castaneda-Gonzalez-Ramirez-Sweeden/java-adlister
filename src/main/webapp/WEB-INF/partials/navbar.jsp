@@ -13,13 +13,10 @@
             </li>
             <c:choose>
                 <c:when test="${sessionScope['user'] != null}">
-                    <li><a href="${pageContext.request.contextPath}/profile">View Profile</a></li>
-                    <li><a href="${pageContext.request.contextPath}/logout">Log Out</a></li>
-                    <li><a href="${pageContext.request.contextPath}/ads/create">Create An Ad</a></li>
+                    <li><a href="${pageContext.request.contextPath}/profile">View Profile</a>   <a href="${pageContext.request.contextPath}/logout">Log Out</a>   <a href="${pageContext.request.contextPath}/ads/create">Create An Ad</a></li>
                 </c:when>
                 <c:otherwise>
-                    <li><a href="${pageContext.request.contextPath}/login">Log In</a></li>
-                    <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
+                    <li><a href="${pageContext.request.contextPath}/login">Log In</a>            <a href="${pageContext.request.contextPath}/register">Register</a></li>
                 </c:otherwise>
             </c:choose>
         </ul>
