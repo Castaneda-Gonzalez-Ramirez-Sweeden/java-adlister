@@ -9,7 +9,9 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
-    <h1>Welcome to the Padlister!</h1>
+    <div class="title">
+        <h1>Welcome to the Padlister!</h1>
+    </div>
 </div>
 </body>
 </html>
