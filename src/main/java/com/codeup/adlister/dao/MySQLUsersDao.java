@@ -65,18 +65,6 @@ public class MySQLUsersDao implements Users {
         }
     }
 
-    private User extractUser(ResultSet rs) throws SQLException {
-        if (! rs.next()) {
-            return null;
-        }
-        return new User(
-            rs.getLong("id"),
-            rs.getString("username"),
-            rs.getString("email"),
-            rs.getString("password")
-        );
-    }
-
     public void updateUser(User user){
         try{
             String updateQuery = "UPDATE users SET username = ?, email = ? WHERE id = ?";
@@ -89,5 +77,15 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error Updating user");
         }
     }
-
+    private User extractUser(ResultSet rs) throws SQLException {
+        if (! rs.next()) {
+            return null;
+        }
+        return new User(
+                rs.getLong("id"),
+                rs.getString("username"),
+                rs.getString("email"),
+                rs.getString("password")
+        );
+    }
 }

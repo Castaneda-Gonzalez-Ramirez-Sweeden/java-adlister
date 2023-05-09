@@ -1,0 +1,110 @@
+/* Fonts Form Google Font ::- https://fonts.google.com/  -:: */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap');
+
+/* End Fonts */
+/* Start Global rules */
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+body {
+    background-color: #a1a1a1;
+}
+
+.paw{
+    color:black;
+    font-size: xx-large;
+}
+
+/*largest div overlaid on top of background {*/
+/*    background-color: #232246;*/
+/*}*/
+
+.form-control {
+    width: 250px;
+    height: 50px;
+    margin-top: 2px;
+    padding: 5px;
+    font-size: 16px;
+    color: #f7f9fb;
+    /*outline: none;*/
+    /*border: none;*/
+}
+
+label {
+    font-size: 16px;
+}
+
+.btn {
+    background: #21130d;
+    color: #f7f9fb;
+    font-size: 16px;
+}
+
+.navagationBar {
+    position: relative;
+    width: 100%;
+    background-color: #f7f9fb;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+
+.topNavBar {
+    width: 100%;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    padding: 20px;
+    background-color: darkblue;
+    color: ghostwhite;
+}
+
+.bottomNavBar {
+    width: 100%;
+    background-color: darkgray;
+    color: darkblue;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3px;
+    text-align: center;
+}
+
+.searchBar{
+    padding-top: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.borderAd{
+    margin: 10px 5px;
+    border-top: darkblue 9px solid;
+    border-bottom: solid 3px darkblue;
+    border-left: solid 2px darkblue;
+    border-right: solid 2px darkblue;
+}
+
+.borderAd h2 {
+    text-align: center;
+    font-weight: bolder;
+    padding: 5px;
+}
+.heading{
+    text-align: center;
+    font-size: xxx-large;
+    text-underline: darkblue;
+    color: darkblue;
+    margin-top: 25px;
+}
