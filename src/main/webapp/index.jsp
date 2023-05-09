@@ -12,6 +12,7 @@
     <div class="title">
         <h1>Welcome to the Padlister!</h1>
     </div>
+
 </div>
 </body>
 </html>

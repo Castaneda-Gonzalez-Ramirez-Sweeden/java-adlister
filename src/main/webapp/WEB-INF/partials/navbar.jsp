@@ -17,6 +17,7 @@
                     <li><a href="${pageContext.request.contextPath}/ads">View Ads</a></li>
                     <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
                     <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
+
                 </c:otherwise>
             </c:choose>
             <li>
